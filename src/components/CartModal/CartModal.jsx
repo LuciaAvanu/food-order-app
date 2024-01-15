@@ -12,7 +12,7 @@ export default function CartModal({setModalIsOpen}) {
         onClick={handleBackgroundClick}
         className="w-full h-full fixed top-0 left-0 bg-black/70"
       ></div>
-      <Cart />
+      <Cart setModalIsOpen={setModalIsOpen}/>
     </div>,
     document.getElementById("modal")
   );
