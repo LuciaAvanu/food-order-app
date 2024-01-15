@@ -5,7 +5,7 @@ export default function CartItem({ cartItem }) {
   const cartCtx = useContext(CartContext);
 
   return (
-    <div className="item flex mb-2 justify-between">
+    <div className="item flex mb-4 justify-between">
       <p>
         {cartItem.name} - {cartItem.qty} x ${cartItem.price}
       </p>
