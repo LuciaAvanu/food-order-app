@@ -32,7 +32,7 @@ export default function Menu() {
   return (
     <div className="menu w-full justify-items-center grid grid-cols-4 ">
       {meals.map((meal) => (
-        <Card meal={meal} />
+        <Card meal={meal} key={meal.id}/>
       ))}
     </div>
   );
