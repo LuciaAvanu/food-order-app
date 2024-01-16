@@ -28,8 +28,10 @@ export default function CheckoutForm({ setModalIsOpen, setDisplay }) {
       total: cartCtx.totalPrice,
     };
     //deliver to Restaurant...
+    console.log(order)
 
-    // reset page
+    // go to Submitted page
+    setDisplay(2)
   }
 
   return (
@@ -131,9 +133,9 @@ export default function CheckoutForm({ setModalIsOpen, setDisplay }) {
         </div>
       </div>
 
-      <div className="action-buttons bg-red-400 self-end mt-6">
-        <button onClick={() => setModalIsOpen(false)}>Close</button>
-        <button type="submit" className="ml-3">
+      <div className="action-buttons self-end mt-6">
+        <button className=" hover:text-red-500" onClick={() => setModalIsOpen(false)}>Close</button>
+        <button type="submit" className="ml-6 bg-yellow-400 p-3 rounded-md">
           Submit
         </button>
       </div>
