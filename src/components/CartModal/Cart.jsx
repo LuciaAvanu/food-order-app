@@ -5,7 +5,6 @@ import Actions from "./Actions";
 
 export default function Cart({ setModalIsOpen, setDisplay }) {
   const cartCtx = useContext(CartContext);
-  console.log(cartCtx)
 
   return (
     <>

@@ -10,7 +10,7 @@ export default function Checkout({setModalIsOpen, setDisplay}) {
     <>
       <h1 className="text-2xl font-bold mb-4 tracking-wide">Checkout</h1>
       <p>Total amount: ${(cartCtx.totalPrice).toFixed(2)}</p>
-      <CheckoutForm />
+      <CheckoutForm setModalIsOpen={setModalIsOpen} setDisplay={setDisplay}/>
     </>
   );
 }
