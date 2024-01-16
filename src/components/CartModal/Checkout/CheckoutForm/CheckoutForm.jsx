@@ -27,7 +27,9 @@ export default function CheckoutForm({ setModalIsOpen, setDisplay }) {
       orderItems: cartCtx.items,
       total: cartCtx.totalPrice,
     };
-    console.log(order);
+    //deliver to Restaurant...
+
+    // reset page
   }
 
   return (
