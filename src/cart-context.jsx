@@ -57,7 +57,6 @@ export default function CartContextProvider({ children }) {
       let newItemsQty = shoppingCart.itemsQty;
       let newTotalPrice = shoppingCart.totalPrice;
 
-
       if (action === "increment") {
         //update item qty
         shoppingCart.items[itemIdx].qty++;
@@ -68,6 +67,10 @@ export default function CartContextProvider({ children }) {
       } else {
         //update item qty
         shoppingCart.items[itemIdx].qty--;
+        //if the item qty is now 0, we need to remove it from the cart
+        if(shoppingCart.items[itemIdx].qty === 0){
+          shoppingCart.items.splice(itemIdx, 1)
+        }
         //update cart qty
         newItemsQty --;
         //update price
